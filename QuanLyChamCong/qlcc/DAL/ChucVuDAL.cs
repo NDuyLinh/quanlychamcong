@@ -27,16 +27,12 @@ namespace DAL
             };
             return db.ExecuteSQL("chucvu_Insert", para);
         }
-
-        public int Update(ChucVu obj)
+        
+        public void Update(ChucVu obj)
         {
-            MySqlParameter[] para =
-            {
-                new MySqlParameter("idCV",obj.MaCV),
-                new MySqlParameter("TenCV",obj.TenCV)
-            };
-            return db.ExecuteSQL("chucvu_Update", para);
+            db.Update("update chucvu set TenCV = '"+ obj.TenCV + "' Where MaCV = '" + obj.MaCV + "' ");
         }
+
 
         public int Delete(string id)
         {

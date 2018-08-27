@@ -134,6 +134,19 @@ namespace QuanLyChamCong
             cbbHSL.ValueMember = "HeSoLuong";
         }
 
+        private string getTextCombobox(string mpb)
+        {
+            DataTable dt = bus.GetDataPB();
+            for(int i = 0; i < dt.Rows.Count; i++)
+            {
+                if(dt.Rows[i][0].ToString() == mpb)
+                {
+                    return dt.Rows[i][1].ToString();
+                }
+            }
+            return "";
+        }
+
         private void btn_Luu_Click(object sender, EventArgs e)
         {
             obj.MaNhanVien = txtMaNV.Text;
@@ -148,32 +161,34 @@ namespace QuanLyChamCong
             {
                 obj.GioiTinh = "Nữ";
             }
-            obj.MaPB = cbbPB.ValueMember;
-            obj.MaCV = cbbCV.ValueMember;
+
+            obj.MaPB = cbbPB.SelectedValue.ToString();
+            obj.MaCV = cbbCV.SelectedValue.ToString();
             obj.TenNV = txtTenNV.Text;
-            obj.HeSoLuong = cbbHSL.ValueMember;
-            obj.NgaySinh = dateNS.Text;
-            obj.NgayVaoLam = dateNVL.Text;
+            obj.HeSoLuong = cbbHSL.SelectedValue.ToString();
+            obj.NgaySinh = dateNS.Value.Date.ToString("yyyy/MM/dd");
+            obj.NgayVaoLam = dateNVL.Value.Date.ToString("yyyy/MM/dd");
             obj.SoCM = txtSCMND.Text;
             obj.DienThoai = txtSDT.Text;
             if (IsInsert == true)
-            { 
-                    bus.Insert(obj);
-                    XtraMessageBox.Show("Thêm thông tin thành công");
-                    hienthi();
-                    XoaText();
-                    KhoaDieuKhien();
+            {
+                bus.Insert(obj);
+                XtraMessageBox.Show("Thêm thông tin thành công");
+                hienthi();
+                XoaText();
+                KhoaDieuKhien();
 
             }
-                
-            else{
-                        bus.Update(obj);
-                        XtraMessageBox.Show("Sửa thông tin thành công");
-                }
-                
+
+            else
+            {
+                bus.Update(obj);
+                XtraMessageBox.Show("Sửa thông tin thành công");
             }
-        
-       
+
+        }
+
+
 
         private void dataNhanVien_Click(object sender, EventArgs e)
         {
@@ -181,7 +196,8 @@ namespace QuanLyChamCong
                 try
                 {
                     txtMaNV.Text = dataNhanVien.CurrentRow.Cells[0].Value.ToString();
-                    cbbPB.Text = dataNhanVien.CurrentRow.Cells[1].Value.ToString();
+                    cbbPB.Text = getTextCombobox(dataNhanVien.CurrentRow.Cells[1].Value.ToString());
+                   
                     cbbCV.Text = dataNhanVien.CurrentRow.Cells[2].Value.ToString();
                     cbbHSL.Text = dataNhanVien.CurrentRow.Cells[3].Value.ToString();
                 if (dataNhanVien.CurrentRow.Cells[5].Value.ToString().Equals("Nam"))
@@ -225,6 +241,16 @@ namespace QuanLyChamCong
             {
                 XtraMessageBox.Show("Lỗi");
             }
+        }
+
+        private void cbbPB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
     

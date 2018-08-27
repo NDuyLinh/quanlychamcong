@@ -67,8 +67,9 @@
             this.dataNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataNhanVien.Location = new System.Drawing.Point(5, 345);
             this.dataNhanVien.Name = "dataNhanVien";
-            this.dataNhanVien.Size = new System.Drawing.Size(897, 250);
+            this.dataNhanVien.Size = new System.Drawing.Size(976, 250);
             this.dataNhanVien.TabIndex = 0;
+            this.dataNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataNhanVien_CellContentClick);
             this.dataNhanVien.Click += new System.EventHandler(this.dataNhanVien_Click);
             // 
             // txtMaNV
@@ -184,6 +185,7 @@
             this.cbbPB.Size = new System.Drawing.Size(176, 23);
             this.cbbPB.TabIndex = 10;
             this.cbbPB.DropDown += new System.EventHandler(this.cbbPB_DropDown);
+            this.cbbPB.SelectedIndexChanged += new System.EventHandler(this.cbbPB_SelectedIndexChanged);
             // 
             // cbbCV
             // 
@@ -369,7 +371,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 550);
+            this.ClientSize = new System.Drawing.Size(993, 578);
             this.Controls.Add(this.dateNVL);
             this.Controls.Add(this.dateNS);
             this.Controls.Add(this.label11);

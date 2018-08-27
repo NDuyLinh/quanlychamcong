@@ -54,6 +54,14 @@ namespace DAL
             conn.Close();
         }
 
+        public void Insert(string sql)
+        {
+                MySqlCommand cmd = new MySqlCommand(sql, conn);
+                conn.Open();
+                cmd.ExecuteNonQuery();
+                conn.Close();
+        }
+
         
 
         public int ExecuteSQL(string strSQL)
@@ -64,6 +72,7 @@ namespace DAL
             conn.Close();
             return row;
         }
+
         public int ExecuteSQL(string proName, MySqlParameter[] para)
         {
             MySqlCommand cmd = new MySqlCommand();
@@ -79,12 +88,6 @@ namespace DAL
 
         }
 
-        public void Insert(string sql)
-        {
-            MySqlCommand cmd = new MySqlCommand(sql, conn);
-            conn.Open();
-            cmd.ExecuteNonQuery();
-            conn.Close();
-        }
+        
     }
 }

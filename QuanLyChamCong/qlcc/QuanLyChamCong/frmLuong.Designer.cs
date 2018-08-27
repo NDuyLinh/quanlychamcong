@@ -37,12 +37,17 @@
             this.btn_Sua = new DevExpress.XtraEditors.SimpleButton();
             this.btn_luu = new DevExpress.XtraEditors.SimpleButton();
             this.btn_Xoa = new DevExpress.XtraEditors.SimpleButton();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataLuong)).BeginInit();
             this.SuspendLayout();
             // 
             // dataLuong
             // 
             this.dataLuong.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataLuong.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
             this.dataLuong.Location = new System.Drawing.Point(39, 152);
             this.dataLuong.Name = "dataLuong";
             this.dataLuong.Size = new System.Drawing.Size(723, 225);
@@ -68,18 +73,18 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(39, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(68, 13);
             this.label1.TabIndex = 3;
-            this.label1.Text = "label1";
+            this.label1.Text = "Hệ Số Lương";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(39, 93);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(74, 13);
             this.label2.TabIndex = 4;
-            this.label2.Text = "label2";
+            this.label2.Text = "Lương Cơ Bản";
             // 
             // btn_them
             // 
@@ -117,6 +122,20 @@
             this.btn_Xoa.Text = "Xóa";
             this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "HeSoLuong";
+            this.Column1.HeaderText = "Hệ Số Lương";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "LuongCB";
+            this.Column2.HeaderText = "Lương Cơ Bản";
+            this.Column2.Name = "Column2";
+            // 
             // frmLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -151,5 +170,7 @@
         private DevExpress.XtraEditors.SimpleButton btn_Sua;
         private DevExpress.XtraEditors.SimpleButton btn_luu;
         private DevExpress.XtraEditors.SimpleButton btn_Xoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

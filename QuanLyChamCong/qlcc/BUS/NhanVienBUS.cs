@@ -24,9 +24,9 @@ namespace BUS
             return dal.GetDataByID(ID);
         }
 
-        public int Insert(NhanVien obj)
+        public void Insert(NhanVien obj)
         {
-            return dal.Insert(obj);
+            dal.Insert(obj);
         }
         //public void Insert(NhanVien obj)
         //{

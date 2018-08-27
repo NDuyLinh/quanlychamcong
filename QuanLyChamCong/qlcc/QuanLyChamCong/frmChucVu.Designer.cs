@@ -38,6 +38,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataChucVu)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,9 +60,12 @@
             // dataChucVu
             // 
             this.dataChucVu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataChucVu.Location = new System.Drawing.Point(35, 217);
+            this.dataChucVu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            this.dataChucVu.Location = new System.Drawing.Point(26, 196);
             this.dataChucVu.Name = "dataChucVu";
-            this.dataChucVu.Size = new System.Drawing.Size(759, 229);
+            this.dataChucVu.Size = new System.Drawing.Size(761, 164);
             this.dataChucVu.TabIndex = 4;
             this.dataChucVu.Click += new System.EventHandler(this.dataChucVu_Click);
             // 
@@ -111,38 +116,52 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 20F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label3.Location = new System.Drawing.Point(271, 22);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(222, 34);
+            this.label3.Size = new System.Drawing.Size(227, 31);
             this.label3.TabIndex = 9;
             this.label3.Text = "Quản Lý Chức Vụ";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Adobe Gothic Std B", 10F);
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label4.Location = new System.Drawing.Point(23, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(83, 18);
+            this.label4.Size = new System.Drawing.Size(84, 17);
             this.label4.TabIndex = 10;
             this.label4.Text = "Mã Chức Vụ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Gothic Std B", 10F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label1.Location = new System.Drawing.Point(23, 154);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 18);
+            this.label1.Size = new System.Drawing.Size(90, 17);
             this.label1.TabIndex = 10;
             this.label1.Text = "Tên Chức Vụ";
+            // 
+            // Column1
+            // 
+            this.Column1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column1.DataPropertyName = "MaCV";
+            this.Column1.HeaderText = "Mã Chức Vụ";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Column2.DataPropertyName = "TenCV";
+            this.Column2.HeaderText = "Tên chức vụ";
+            this.Column2.Name = "Column2";
             // 
             // frmChucVu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(817, 458);
+            this.ClientSize = new System.Drawing.Size(817, 372);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -174,5 +193,7 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
     }
 }

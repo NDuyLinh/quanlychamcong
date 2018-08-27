@@ -22,9 +22,9 @@ namespace BUS
             return dal.Insert(obj);
         }
 
-        public int Update(ChucVu obj)
+        public void Update(ChucVu obj)
         {
-            return dal.Update(obj);
+            dal.Update(obj);
         }
 
         public int Delete(string id)

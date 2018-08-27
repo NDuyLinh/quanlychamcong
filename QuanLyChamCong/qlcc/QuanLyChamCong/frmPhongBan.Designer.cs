@@ -37,9 +37,9 @@
             this.btn_them = new DevExpress.XtraEditors.SimpleButton();
             this.btn_sua = new DevExpress.XtraEditors.SimpleButton();
             this.btn_xoa = new DevExpress.XtraEditors.SimpleButton();
-            this.TenPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.snc = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.data = new System.Windows.Forms.DataGridView();
+            this.Mapb = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TenPB = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.data)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,10 +57,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Adobe Gothic Std B", 20F);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.label1.Location = new System.Drawing.Point(270, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(256, 34);
+            this.label1.Size = new System.Drawing.Size(256, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Quản Lý Phòng Ban";
             // 
@@ -81,20 +81,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Adobe Gothic Std B", 10F);
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label2.Location = new System.Drawing.Point(37, 124);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(102, 18);
+            this.label2.Size = new System.Drawing.Size(101, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "Mã Phòng Ban";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Adobe Gothic Std B", 10F);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
             this.label3.Location = new System.Drawing.Point(37, 179);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(107, 18);
+            this.label3.Size = new System.Drawing.Size(107, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Tên Phòng Ban";
             // 
@@ -131,29 +131,31 @@
             this.btn_xoa.Text = "Xóa";
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
-            // TenPB
-            // 
-            this.TenPB.DataPropertyName = "TenPB";
-            this.TenPB.HeaderText = "Tên Phòng Ban";
-            this.TenPB.Name = "TenPB";
-            // 
-            // snc
-            // 
-            this.snc.DataPropertyName = "MaPB";
-            this.snc.HeaderText = "Mã Phòng Ban";
-            this.snc.Name = "snc";
-            // 
             // data
             // 
             this.data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.data.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.snc,
+            this.Mapb,
             this.TenPB});
             this.data.Location = new System.Drawing.Point(40, 238);
             this.data.Name = "data";
-            this.data.Size = new System.Drawing.Size(721, 228);
+            this.data.Size = new System.Drawing.Size(721, 159);
             this.data.TabIndex = 8;
             this.data.Click += new System.EventHandler(this.data_Click);
+            // 
+            // Mapb
+            // 
+            this.Mapb.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Mapb.DataPropertyName = "MaPB";
+            this.Mapb.HeaderText = "Mã Phòng Ban";
+            this.Mapb.Name = "Mapb";
+            // 
+            // TenPB
+            // 
+            this.TenPB.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.TenPB.DataPropertyName = "TenPB";
+            this.TenPB.HeaderText = "Tên Phòng Ban";
+            this.TenPB.Name = "TenPB";
             // 
             // frmPhongBan
             // 
@@ -190,8 +192,8 @@
         private DevExpress.XtraEditors.SimpleButton btn_them;
         private DevExpress.XtraEditors.SimpleButton btn_sua;
         private DevExpress.XtraEditors.SimpleButton btn_xoa;
-        private System.Windows.Forms.DataGridViewTextBoxColumn TenPB;
-        private System.Windows.Forms.DataGridViewTextBoxColumn snc;
         private System.Windows.Forms.DataGridView data;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Mapb;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TenPB;
     }
 }

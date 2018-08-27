@@ -309,3 +309,5 @@ C:\Users\duy linh\source\repos\QuanLyChamCong\qlcc\QuanLyChamCong\obj\Debug\Quan
 C:\Users\duy linh\source\repos\QuanLyChamCong\qlcc\QuanLyChamCong\obj\Debug\QuanLyChamCong.csproj.CopyComplete
 C:\Users\duy linh\source\repos\QuanLyChamCong\qlcc\QuanLyChamCong\obj\Debug\QuanLyChamCong.exe
 C:\Users\duy linh\source\repos\QuanLyChamCong\qlcc\QuanLyChamCong\obj\Debug\QuanLyChamCong.pdb
+C:\Users\duy linh\source\repos\QuanLyChamCong\qlcc\QuanLyChamCong\obj\Debug\QuanLyChamCong.TabMenu.resources
+C:\Users\duy linh\source\repos\QuanLyChamCong\qlcc\QuanLyChamCong\obj\Debug\QuanLyChamCong.frmChamCong.resources
