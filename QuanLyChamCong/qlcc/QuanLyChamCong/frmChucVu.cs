@@ -109,6 +109,7 @@ namespace QuanLyChamCong
             {
                 bus.Update(obj);
                 XtraMessageBox.Show("Sửa thông tin thành công");
+                hienthi();
             }
         }
 

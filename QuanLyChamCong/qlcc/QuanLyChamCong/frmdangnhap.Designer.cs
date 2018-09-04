@@ -39,10 +39,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 15F);
-            this.label1.Location = new System.Drawing.Point(256, 30);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 20F);
+            this.label1.Location = new System.Drawing.Point(244, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(109, 24);
+            this.label1.Size = new System.Drawing.Size(148, 33);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đăng Nhập";
             // 
@@ -60,12 +60,13 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(199, 21);
             this.txtPassword.TabIndex = 2;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(277, 168);
+            this.simpleButton1.Location = new System.Drawing.Point(270, 159);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(75, 23);
+            this.simpleButton1.Size = new System.Drawing.Size(89, 36);
             this.simpleButton1.TabIndex = 3;
             this.simpleButton1.Text = "Đăng Nhập";
             this.simpleButton1.Click += new System.EventHandler(this.simpleButton1_Click);
@@ -73,18 +74,20 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label2.Location = new System.Drawing.Point(84, 76);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.Size = new System.Drawing.Size(104, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Tên Đăng Nhâp";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 10F);
             this.label3.Location = new System.Drawing.Point(84, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.Size = new System.Drawing.Size(65, 17);
             this.label3.TabIndex = 5;
             this.label3.Text = "Mật Khẩu";
             // 

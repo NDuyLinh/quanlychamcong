@@ -15,7 +15,12 @@ namespace DAL
 
         public DataTable GetData()
         {
-            return db.GetData("SELECT chamcong.MaNhanVien,nhanvien.TenNV,chamcong.TinhTrang FROM chamcong INNER JOIN nhanvien on chamcong.MaNhanVien = nhanvien.MaNhanVien");
+            return db.GetData("SELECT nhanvien.MaNhanVien,nhanvien.TenNV FROM nhanvien ");
+        }
+
+        public void Insert(ChamCong obj)
+        {
+            db.Insert("INSERT INTO `chamcong` (`MaNhanVien`, `Ngay`, `TinhTrang`) VALUES ('" + obj.MaNhanVien + "', '" + obj.Ngay + "', '" + obj.TinhTrang + "');");
         }
     }
 }

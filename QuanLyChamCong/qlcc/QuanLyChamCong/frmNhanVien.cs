@@ -184,6 +184,7 @@ namespace QuanLyChamCong
             {
                 bus.Update(obj);
                 XtraMessageBox.Show("Sửa thông tin thành công");
+                hienthi();
             }
 
         }
@@ -251,6 +252,15 @@ namespace QuanLyChamCong
         private void dataNhanVien_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void txtSDT_TextChanged(object sender, EventArgs e)
+        {
+            if (System.Text.RegularExpressions.Regex.IsMatch(txtSDT.Text, "[^0-9]"))
+            {
+              
+                txtSDT.Text = txtSDT.Text.Remove(txtSDT.Text.Length - 1);
+            }
         }
     }
     

@@ -29,17 +29,26 @@ namespace QuanLyChamCong
             string password = txtPassword.Text;
             obj.TenDangNhap = username;
             obj.MatKhau = password;
+            
             if(bus.check_taikhoan(obj))
             {
                 this.Hide();
-                frmNhanVien frmnhanvien = new frmNhanVien();
-                frmnhanvien.Show();
+                TabMenu tb = new TabMenu();
+                tb.Show();
             }
             else
             {
                 MessageBox.Show("Sai Tên Đăng Nhập và Tài Khoản");
             }
 
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                simpleButton1.PerformClick();
+            }
         }
     }
 }

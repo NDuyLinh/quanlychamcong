@@ -17,5 +17,10 @@ namespace BUS
         {
             return dal.GetData();
         }
+
+        public void Insert(ChamCong obj)
+        {
+            dal.Insert(obj);
+        }
     }
 }

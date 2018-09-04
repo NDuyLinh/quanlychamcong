@@ -14,7 +14,7 @@ namespace DAL
 
         public DBConnect()
         {
-            conn = new MySqlConnection("Server=localhost;Port=3306;DataBase=bangchamcong;User ID = root;password=;CharSet=utf8;sslmode=none;Convert Zero Datetime=True");
+            conn = new MySqlConnection("Server=localhost;Port=3306;DataBase=banggchamcong;User ID = root;password=;CharSet=utf8;sslmode=none;Convert Zero Datetime=True");
         }
 
         public DataTable GetData(string strSQL)

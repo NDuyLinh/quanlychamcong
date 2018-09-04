@@ -29,6 +29,17 @@
         private void InitializeComponent()
         {
             this.dataNhanVien = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txtMaNV = new System.Windows.Forms.TextBox();
             this.txtTenNV = new System.Windows.Forms.TextBox();
             this.radio_Nam = new System.Windows.Forms.RadioButton();
@@ -65,12 +76,90 @@
             // dataNhanVien
             // 
             this.dataNhanVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataNhanVien.Location = new System.Drawing.Point(5, 345);
+            this.dataNhanVien.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4,
+            this.Column5,
+            this.Column6,
+            this.Column7,
+            this.Column8,
+            this.Column9,
+            this.Column10,
+            this.Column11});
+            this.dataNhanVien.Location = new System.Drawing.Point(5, 355);
             this.dataNhanVien.Name = "dataNhanVien";
-            this.dataNhanVien.Size = new System.Drawing.Size(976, 250);
+            this.dataNhanVien.Size = new System.Drawing.Size(1126, 235);
             this.dataNhanVien.TabIndex = 0;
             this.dataNhanVien.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataNhanVien_CellContentClick);
             this.dataNhanVien.Click += new System.EventHandler(this.dataNhanVien_Click);
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "MaNhanVien";
+            this.Column1.HeaderText = "Mã Nhân Viên";
+            this.Column1.Name = "Column1";
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "MaPB";
+            this.Column2.HeaderText = "Mã Phòng Ban";
+            this.Column2.Name = "Column2";
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "MaCV";
+            this.Column3.HeaderText = "Mã Chức Vụ";
+            this.Column3.Name = "Column3";
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "HeSoLuong";
+            this.Column4.HeaderText = "Hệ Số Lương";
+            this.Column4.Name = "Column4";
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "TenNV";
+            this.Column5.HeaderText = "Tên Nhân Viên";
+            this.Column5.Name = "Column5";
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "GioiTinh";
+            this.Column6.HeaderText = "Giới Tính";
+            this.Column6.Name = "Column6";
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "NgaySinh";
+            this.Column7.HeaderText = "Ngày Sinh";
+            this.Column7.Name = "Column7";
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "NgayVaoLam";
+            this.Column8.HeaderText = "Ngày Vào Làm";
+            this.Column8.Name = "Column8";
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "SoCM";
+            this.Column9.HeaderText = "Số CMND";
+            this.Column9.Name = "Column9";
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "DienThoai";
+            this.Column10.HeaderText = "Điện Thoại";
+            this.Column10.Name = "Column10";
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "email";
+            this.Column11.HeaderText = "Email";
+            this.Column11.Name = "Column11";
             // 
             // txtMaNV
             // 
@@ -154,9 +243,11 @@
             // 
             this.txtSDT.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSDT.Location = new System.Drawing.Point(121, 311);
+            this.txtSDT.MaxLength = 11;
             this.txtSDT.Name = "txtSDT";
             this.txtSDT.Size = new System.Drawing.Size(176, 21);
             this.txtSDT.TabIndex = 2;
+            this.txtSDT.TextChanged += new System.EventHandler(this.txtSDT_TextChanged);
             // 
             // txtaddress
             // 
@@ -371,7 +462,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(993, 578);
+            this.ClientSize = new System.Drawing.Size(1143, 602);
             this.Controls.Add(this.dateNVL);
             this.Controls.Add(this.dateNS);
             this.Controls.Add(this.label11);
@@ -445,5 +536,16 @@
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.ComboBox cbbHSL;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
     }
 }

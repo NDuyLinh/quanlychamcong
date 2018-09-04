@@ -43,7 +43,7 @@
             this.xtraTabControl1.Location = new System.Drawing.Point(0, 0);
             this.xtraTabControl1.Name = "xtraTabControl1";
             this.xtraTabControl1.SelectedTabPage = this.xtraTabPage5;
-            this.xtraTabControl1.Size = new System.Drawing.Size(913, 457);
+            this.xtraTabControl1.Size = new System.Drawing.Size(967, 559);
             this.xtraTabControl1.TabIndex = 0;
             this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -51,46 +51,46 @@
             this.xtraTabPage3,
             this.xtraTabPage4,
             this.xtraTabPage5});
-            this.xtraTabControl1.Click += new System.EventHandler(this.xtraTabControl1_Click);
             // 
             // xtraTabPage5
             // 
             this.xtraTabPage5.Name = "xtraTabPage5";
-            this.xtraTabPage5.Size = new System.Drawing.Size(907, 429);
+            this.xtraTabPage5.Size = new System.Drawing.Size(961, 531);
             this.xtraTabPage5.Text = "Chấm Công";
             // 
             // xtraTabPage1
             // 
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(862, 429);
+            this.xtraTabPage1.Size = new System.Drawing.Size(907, 531);
             this.xtraTabPage1.Text = "Nhân Viên";
             // 
             // xtraTabPage2
             // 
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(862, 429);
+            this.xtraTabPage2.Size = new System.Drawing.Size(907, 531);
             this.xtraTabPage2.Text = "Chức Vụ";
             // 
             // xtraTabPage3
             // 
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(862, 429);
+            this.xtraTabPage3.Size = new System.Drawing.Size(907, 531);
             this.xtraTabPage3.Text = "Phòng Ban";
             // 
             // xtraTabPage4
             // 
             this.xtraTabPage4.Name = "xtraTabPage4";
-            this.xtraTabPage4.Size = new System.Drawing.Size(862, 429);
+            this.xtraTabPage4.Size = new System.Drawing.Size(907, 531);
             this.xtraTabPage4.Text = "Lương";
             // 
             // TabMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(925, 457);
+            this.ClientSize = new System.Drawing.Size(972, 561);
             this.Controls.Add(this.xtraTabControl1);
             this.Name = "TabMenu";
             this.Text = "TabMenu";
+            this.Load += new System.EventHandler(this.TabMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);

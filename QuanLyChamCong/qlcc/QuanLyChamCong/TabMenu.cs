@@ -58,15 +58,7 @@ namespace QuanLyChamCong
             xtraTabControl1.TabPages[4].Controls.Add(cc);
         }
 
-        private void xtraTabControl1_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void btn_nhanvien_Click(object sender, EventArgs e)
-        {
-            
-        }
+       
 
         private void btn_cv_Click(object sender, EventArgs e)
         {
@@ -84,6 +76,11 @@ namespace QuanLyChamCong
         {
             frmLuong luong = new frmLuong();
             luong.Show();
+        }
+
+        private void TabMenu_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
